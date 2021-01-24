@@ -1,5 +1,4 @@
-site_name: My Blog
+site_name: Florian Wilhelm's Blog
 nav:
     - Home: index.md
     - Posts: posts.md
-    - About: about.md
