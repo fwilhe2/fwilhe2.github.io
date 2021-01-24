@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: fwilhe2/setup-kotlin@main
+      with:
+        version: 1.4.30-RC
+        install-native: false
+    - run: |
+          java.io.File("docs/posts.md").writeText(java.io.File("docs").listFiles().filter{!it.toString().contains("index")}.map {it -> "[${it.getName().split(".")[0].toString()}](../${it.getName().split(".")[0].toString()})"}.joinToString(separator = "\n\n"))
+      shell: kotlin -howtorun .main.kts {0}
+    - run: sudo pip install mkdocs
+    - run: mkdocs build && mkdocs gh-deploy --force

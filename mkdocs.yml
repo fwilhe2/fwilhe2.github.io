@@ -1,0 +1,5 @@
+site_name: My Blog
+nav:
+    - Home: index.md
+    - Posts: posts.md
+    - About: about.md
