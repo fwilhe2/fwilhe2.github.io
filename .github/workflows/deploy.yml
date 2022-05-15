@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: fwilhe2/setup-kotlin@main
       with:
-        version: 1.4.30-RC
+        version: 1.6.21
         install-native: false
     - run: |
           java.io.File("docs/posts.md").writeText(java.io.File("docs").listFiles().filter{!it.toString().contains("index")}.map {it -> "[${it.getName().split(".")[0].toString()}](../${it.getName().split(".")[0].toString()})"}.joinToString(separator = "\n\n"))
