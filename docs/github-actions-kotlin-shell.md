@@ -1,6 +1,6 @@
 # Using Kotlin as a Shell for GitHub Actions workflows
 
-Published 2021-01-24 by [fwilhe](https://twitter.com/fwilhe)
+Published 2021-01-24 by [fwilhe](https://social.tchncs.de/@fwilhe)
 
 One interesting thing about GitHub Actions is that you can chose a ["custom shell"](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#custom-shell) per step.
 In connection with Kotlin's [scripting capabilities](https://github.com/Kotlin/kotlin-script-examples/blob/master/jvm/main-kts/MainKts.md), this allows you to write "shell" scripts in Kotlin.
