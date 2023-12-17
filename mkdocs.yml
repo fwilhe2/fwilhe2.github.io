@@ -1,4 +1,10 @@
 site_name: Florian Wilhelm's Blog
+site_description: Florian Wilhelm's Blog
+site_url: https://fwilhe2.github.io/
+
 nav:
     - Home: index.md
     - Posts: posts.md
+
+plugins:
+  - rss

@@ -17,5 +17,5 @@ jobs:
     - run: |
           java.io.File("docs/posts.md").writeText(java.io.File("docs").listFiles().filter{!it.toString().contains("index")}.map {it -> "[${it.getName().split(".")[0].toString()}](../${it.getName().split(".")[0].toString()})"}.joinToString(separator = "\n\n"))
       shell: kotlin -howtorun .main.kts {0}
-    - run: sudo pip install mkdocs
+    - run: sudo pip install mkdocs mkdocs-rss-plugin
     - run: mkdocs build && mkdocs gh-deploy --force
